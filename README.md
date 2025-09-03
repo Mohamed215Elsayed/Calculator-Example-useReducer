@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+📘 Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React calculator app that uses useReducer to manage arithmetic operations between two input numbers.
 
-## Available Scripts
+🔑 Key Features:
 
-In the project directory, you can run:
+Two number inputs
 
-### `npm start`
+The user enters a first number and a second number.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Arithmetic operations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Four buttons perform operations:
 
-### `npm test`
+➕ Add
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+➖ Subtract
 
-### `npm run build`
+✖ Multiply
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+➗ Divide (with divide-by-zero safety)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Result management with useReducer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instead of useState, the app uses useReducer for result state management.
 
-### `npm run eject`
+The reducer handles different action types (ADD, SUB, MULT, DIV) and computes the result.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clean and reusable logic
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A single handler (handleClick) dispatches the correct action type.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Reducer ensures all calculation logic is centralized and easy to extend.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Basic UI styling
 
-## Learn More
+Inputs, labels, and buttons are displayed in the center of the screen.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Background is set to teal with white text for contrast.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+⚙️ How It Works
 
-### Code Splitting
+User enters two numbers in the input fields.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+User clicks one of the operation buttons.
 
-### Analyzing the Bundle Size
+A corresponding action is dispatched to the reducer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The reducer calculates the result and updates the UI.
 
-### Making a Progressive Web App
+Result is shown below the buttons.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📚 Learning Concepts Covered
 
-### Advanced Configuration
+React hooks: useState, useReducer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Controlled form inputs in React
 
-### Deployment
+Action dispatching & reducer functions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clean separation of UI (buttons, inputs) and logic (reducer)
